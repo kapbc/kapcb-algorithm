@@ -27,7 +27,7 @@ public class XOROperation {
         System.out.println("i = " + i);
         int j = i + 1;
         System.out.println("j = " + j);
-        int onlyOne = a ^ j;
+        int onlyOne = a & j;
         System.out.println("onlyOne = " + onlyOne);
     }
 
