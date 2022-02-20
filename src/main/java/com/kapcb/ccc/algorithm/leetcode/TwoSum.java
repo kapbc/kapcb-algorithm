@@ -24,7 +24,7 @@ public class TwoSum {
     }
 
     /**
-     * 时间复杂度 O(n)
+     * 时间复杂度O(n)
      *
      * @param nums   int[]
      * @param target int[]
@@ -41,6 +41,13 @@ public class TwoSum {
         return new int[0];
     }
 
+    /**
+     * 时间复杂度O(n^2)
+     *
+     * @param nums   int[]
+     * @param target int
+     * @return int[]
+     */
     private static int[] doTwoSumByBruteForce(int[] nums, int target) {
         int n = nums.length;
 
