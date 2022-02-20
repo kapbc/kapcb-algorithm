@@ -17,6 +17,13 @@ public class InsertionSort {
     private InsertionSort() {
     }
 
+    /**
+     * 插入排序
+     * 时间复杂度:O(n^2)
+     * 实际时间复杂度受数组的顺序结构影响, 比选择排序和冒泡排序好。
+     *
+     * @param nums int[]
+     */
     private static void doInsertionSort(int[] nums) {
         if (nums == null || nums.length < 2) {
             return;
