@@ -1,5 +1,7 @@
 package com.kapcb.ccc.algorithm.sort;
 
+import java.util.Arrays;
+
 /**
  * <a>Title: ChooseSort </a>
  * <a>Author: Kapcb <a>
@@ -11,4 +13,13 @@ package com.kapcb.ccc.algorithm.sort;
  * @since 1.0
  */
 public class ChooseSort {
+
+    private ChooseSort() {
+    }
+
+    private static void comparator(int[] nums) {
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+    }
+
 }
