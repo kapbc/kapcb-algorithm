@@ -47,7 +47,7 @@ public class OddTimesNum {
         int rightOne = xor & (~xor + 1);
         int onlyOne = 0;
         for (int cur : nums) {
-            if ((cur ^ rightOne) == 1) {
+            if ((cur & rightOne) == 0) {
                 onlyOne ^= cur;
             }
         }
@@ -55,9 +55,11 @@ public class OddTimesNum {
     }
 
     public static void main(String[] args) {
+        // 2
         int[] nums = new int[]{2, 1, 6, 1, 3, 2, 1, 6, 3, 2, 1, 2, 2};
         doOddTimesNum(nums);
 
+        // 1、3
         int[] numsOne = new int[]{1, 8, 2, 6, 3, 6, 3, 6, 1, 2, 6, 3, 8, 1};
         doOddTimesNum2(nums);
     }
