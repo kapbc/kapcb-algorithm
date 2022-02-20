@@ -34,7 +34,12 @@ public class OddTimesNum {
         System.out.println(xor);
     }
 
-
+    /**
+     * 数组中有两类数出现了奇数次, 其它数都出现偶初次, 请输出
+     * 出现奇数次的数字。
+     *
+     * @param nums int[]
+     */
     private static void doOddTimesNum2(int[] nums) {
         if (nums == null || nums.length < 2) {
             return;
