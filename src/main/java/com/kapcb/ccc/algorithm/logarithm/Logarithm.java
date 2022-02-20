@@ -94,4 +94,13 @@ public class Logarithm {
         return true;
     }
 
+    /**
+     * array comparator
+     *
+     * @param arr int[]
+     */
+    public static void comparator(int[] arr) {
+        Arrays.sort(arr);
+    }
+
 }

@@ -1,5 +1,7 @@
 package com.kapcb.ccc.algorithm.sort;
 
+import com.kapcb.ccc.algorithm.logarithm.Logarithm;
+
 import java.util.Arrays;
 
 /**
@@ -34,7 +36,7 @@ public class InsertionSort {
                 swap(nums, j, j + 1);
             }
         }
-        System.out.println(Arrays.toString(nums));
+        // System.out.println(Arrays.toString(nums));
     }
 
     private static void swap(int[] nums, int i, int j) {
@@ -49,9 +51,23 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{1, 4, 3, 2, 5, 3, 6, 4, 7, 2, 4};
-        doInsertionSort(array);
-        comparator(array);
+        int testTime = 500;
+        int maxSize = 50;
+        int maxValue = 500;
+        boolean success = true;
+        for (int i = 0; i < testTime; i++) {
+            int[] arrOne = Logarithm.generateRandomArray(maxSize, maxValue);
+            int[] arrTwo = Logarithm.copyArray(arrOne);
+
+            doInsertionSort(arrOne);
+            Logarithm.comparator(arrTwo);
+            if (!Logarithm.isEqual(arrOne, arrTwo)) {
+                // print array
+                success = false;
+                break;
+            }
+        }
+        System.out.println(success ? "Nice" : "Fail");
     }
 
 }
