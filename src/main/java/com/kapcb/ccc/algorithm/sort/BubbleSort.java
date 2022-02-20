@@ -37,19 +37,29 @@ public class BubbleSort {
         System.out.println(Arrays.toString(array));
     }
 
-    private static void comparator(int[] nums) {
-        Arrays.sort(nums);
-        System.out.println(Arrays.toString(nums));
-    }
-
     private static void swap(int[] array, int big, int small) {
         array[big] = array[big] ^ array[small];
         array[small] = array[big] ^ array[small];
         array[big] = array[big] ^ array[small];
     }
 
+    private static void comparator(int[] nums) {
+        Arrays.sort(nums);
+        System.out.println(Arrays.toString(nums));
+    }
+
+    private static int[] generateRandomArray(int maxSize) {
+        int[] arr = new int[maxSize];
+        for (int i = 0; i < maxSize; i++) {
+            int num = (int) ((Math.random() * 100) + 1);
+            arr[i] = num;
+        }
+        System.out.println(Arrays.toString(arr));
+        return arr;
+    }
+
     public static void main(String[] args) {
-        int[] array = new int[]{1, 4, 3, 2, 5, 3, 6, 4, 7, 2, 4};
+        int[] array = generateRandomArray(10);
         doBubbleSort(array);
         comparator(array);
     }
