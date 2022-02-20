@@ -48,7 +48,15 @@ public class BubbleSort {
         System.out.println(Arrays.toString(nums));
     }
 
+    /**
+
+     *
+     * @param maxSize int
+     * @return int[]
+     */
     private static int[] generateRandomArray(int maxSize) {
+        int[] arr = new int[(int) (Math.random() * (maxSize + 1))];
+
         int[] arr = new int[maxSize];
         for (int i = 0; i < maxSize; i++) {
             int num = (int) ((Math.random() * 100) + 1);
