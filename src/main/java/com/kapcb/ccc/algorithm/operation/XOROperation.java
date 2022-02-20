@@ -15,6 +15,12 @@ public class XOROperation {
     private XOROperation() {
     }
 
+    /**
+     * 如果 a, b 地址的引用在堆中指向同一个地址的话会出错。
+     *
+     * @param a int
+     * @param b int
+     */
     private static void xorSwap(int a, int b) {
         a = a ^ b;
         b = a ^ b;
@@ -23,7 +29,7 @@ public class XOROperation {
     }
 
     private static void get(int a) {
-        int i = ~a ;
+        int i = ~a;
         System.out.println("i = " + i);
         int j = i + 1;
         System.out.println("j = " + j);
