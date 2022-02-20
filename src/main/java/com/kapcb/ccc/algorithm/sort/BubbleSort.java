@@ -43,28 +43,10 @@ public class BubbleSort {
         array[big] = array[big] ^ array[small];
     }
 
-    private static void comparator(int[] nums) {
-        Arrays.sort(nums);
-        System.out.println(Arrays.toString(nums));
-    }
-
-    /**
-
-     *
-     * @param maxSize int
-     * @return int[]
-     */
-    private static int[] generateRandomArray(int maxSize) {
-        int[] arr = new int[maxSize];
-        for (int i = 0; i < maxSize; i++) {
-            int num = (int) ((Math.random() * 100) + 1);
-            arr[i] = num;
-        }
-        System.out.println(Arrays.toString(arr));
-        return arr;
-    }
-
     public static void main(String[] args) {
+
+
+
         int[] array = generateRandomArray(10);
         doBubbleSort(array);
         comparator(array);
