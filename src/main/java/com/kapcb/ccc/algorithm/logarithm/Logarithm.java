@@ -1,5 +1,7 @@
 package com.kapcb.ccc.algorithm.logarithm;
 
+import java.util.Arrays;
+
 /**
  * <a>Title: Logarithm </a>
  * <a>Author: Kapcb <a>
@@ -51,6 +53,45 @@ public class Logarithm {
             res[i] = arr[i];
         }
         return res;
+    }
+
+    /**
+     * print array
+     *
+     * @param arr int[]
+     */
+    public static void printArray(int[] arr) {
+        if (arr == null) {
+            return;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+
+    /**
+     * check two array is equal
+     *
+     * @param arrOne int[]
+     * @param arrTwo int[]
+     * @return boolean
+     */
+    public static boolean isEqual(int[] arrOne, int[] arrTwo) {
+        boolean arrOneNull = arrOne == null && arrTwo != null;
+        boolean arrTwoNull = arrOne != null && arrTwo == null;
+        if (arrOneNull || arrTwoNull) {
+            return false;
+        }
+        if (arrOne == arrTwo) {
+            return true;
+        }
+        if (arrOne.length != arrTwo.length) {
+            return false;
+        }
+        for (int i = 0; i < arrOne.length; i++) {
+            if (arrOne[i] != arrTwo[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
