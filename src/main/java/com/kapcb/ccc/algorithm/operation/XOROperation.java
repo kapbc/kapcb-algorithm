@@ -12,6 +12,25 @@ package com.kapcb.ccc.algorithm.operation;
  */
 public class XOROperation {
 
+    private XOROperation() {
+    }
+
+    private static void xorSwap(int a, int b) {
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println("a is : " + a + ", b is : " + b);
+    }
+
+    private static void get(int a) {
+        int i = ~a ;
+        System.out.println("i = " + i);
+        int j = i + 1;
+        System.out.println("j = " + j);
+        int onlyOne = a ^ j;
+        System.out.println("onlyOne = " + onlyOne);
+    }
+
     /**
      * 异或运算
      * 无进制位相加: 相同为1, 不同为0
@@ -19,13 +38,7 @@ public class XOROperation {
      * @param args String[]
      */
     public static void main(String[] args) {
-        int a = 5;
-        int b = 7;
-
-        a = a ^ b;
-        b = a ^ b;
-        a = a ^ b;
-        System.out.println("a is : " + a + ", b is : " + b);
+        get(7);
     }
 
 }
