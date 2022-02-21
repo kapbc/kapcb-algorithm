@@ -22,7 +22,7 @@ public class SelectionSort {
         if (arr == null || arr.length < 2) {
             return;
         }
-        // i ~ N-1
+        // 0 ~ N-1
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
             // i ~ N-1 上找最小下标
