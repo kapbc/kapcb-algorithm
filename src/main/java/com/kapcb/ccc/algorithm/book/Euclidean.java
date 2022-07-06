@@ -30,7 +30,7 @@ public class Euclidean {
     }
 
     public static void main(String[] args) {
-        int gcd = gcd(12, 6);
+        int gcd = gcd(12, 7);
         System.out.println("gcd = " + gcd);
     }
 }
